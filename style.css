@@ -1,0 +1,756 @@
+@charset "utf-8";
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+section.ttl {
+    margin-bottom: 50px;
+}
+.icon {
+    width: 1rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+p.title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+h2.top {
+    text-align: center;
+    margin-bottom: 1em;
+}
+p.sub {
+    text-align: center;
+    margin-bottom: 1em;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/*----------------
+        header
+-----------------*/
+header {
+    background-color: #fff;
+    border: 1px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 80px;
+    padding-left: 50px;
+    box-shadow: 0px 0px 10px 16px rgba(17,17,26,0.18);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 250px;
+    height: 80px;
+}
+h1 {
+    display: flex;
+    align-items: center;
+}
+h1::before {
+    content: "";
+    background-image: url(./img/favicon_io/apple-touch-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+#navArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+}
+nav ul li + li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    transition: all 0.5s;
+    font-weight: bold;
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+header a.linkBtn {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 24px;
+    position: fixed;
+    top: 16px;
+    right: 30px;
+    font-weight: bold;
+    text-align: center;
+    border:1px solid orange;
+    color: orange;
+    background-color: #fff;
+    outline: none;
+    /*アニメーションの指定*/ 
+    transition: all 0.4s ease-out;
+}
+header a.linkBtn:hover {
+    /*ボタンの形状*/
+    border-color:transparent;
+    color: #fff;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+    background-size: 200% auto;
+    background-position: right center;
+    /*ボックスの影*/   
+    box-shadow: 0 5px 10px rgb(250,108,159,0.4);
+}
+
+/*----------------
+        main
+-----------------*/
+main {
+    padding: 80px 0;
+}
+#firstView {
+    height: calc(100vh - 80px);
+    position: relative;
+    margin-bottom: 80px;
+}
+#firstView .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+#firstView p {
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-shadow: 0 4px 4px #fff;
+}
+#firstView p.text {
+    font-size: 50px;
+}
+#firstView a.linkBtn {
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 35px;
+    font-weight: bold;
+    text-align: center;
+    border:1px solid orange;
+    color: orange;
+    background-color: #fff;
+    outline: none;
+    /*アニメーションの指定*/ 
+    transition: all 0.4s ease-out;
+}
+#firstView a.linkBtn:hover {
+    /*ボタンの形状*/
+    border-color:transparent;
+    color: #fff;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+    background-size: 200% auto;
+    background-position: right center;
+    /*ボックスの影*/   
+    box-shadow: 0 5px 10px rgb(250,108,159,0.4);
+}
+#firstView .fade li {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    animation: fade 25s infinite;
+}
+#firstView .fade li:nth-child(1) {
+    animation-delay: 0s;
+}
+#firstView .fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+#firstView .fade li:nth-child(3) {
+    animation-delay: 10s;
+}
+#firstView .fade li:nth-child(4) {
+    animation-delay: 15s;
+}
+#firstView .fade li:nth-child(5) {
+    animation-delay: 20s;
+}
+@keyframes fade {
+    0% {
+    opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    40% {
+    opacity: 1;
+    }
+    70% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 0;
+    }
+}  
+#firstView .fade li img {
+    height: calc(100vh - 80px);
+}
+/*----------------
+    #concept
+-----------------*/
+#concept .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#concept .content {
+    width: 49%;
+}
+#concept .content h2 {
+    margin-bottom: 0.5em;
+}
+#concept img.people {
+    width: 50%;
+}
+/*----------------
+    #system
+-----------------*/
+#system ul {
+    display: flex;
+    justify-content: space-between;
+}
+#system ul li {
+    width: 32%;
+}
+#system ul li img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#system .content {
+    background-color: rgb(230, 248, 255);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0 1em;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------
+    #plan
+-----------------*/
+#plan ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+#plan ul li {
+    width: 32%;
+    text-align: center;
+}
+#plan ul li span {
+    display: block;
+    color: #fff;
+    padding: 0.5rem 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #9844b7;
+}
+/* #plan ul li span.blue {
+    background-color: blue;
+}
+#plan ul li span.orange {
+    background-color: orange;
+}
+#plan ul li span.black {
+    background-color: #000;
+} */
+#plan ul li p {
+    background-color: #ddd;
+    padding: 2em 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#plan p.plus {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#plan p.price {
+    text-align: center;
+}
+#plan p.price > span {
+    font-size: 20px;
+    margin-left: 1rem;
+}
+#plan p.notice {
+    font-size: 12px;
+    text-align: right;
+}
+
+/*----------------
+    #reservation
+-----------------*/
+#reservation {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9844b7;
+    color: #fff;
+    text-align: center;
+}
+#reservation p {
+    margin-bottom: 2em;
+}
+#reservation a.linkBtn {
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 35px;
+    font-weight: bold;
+    text-align: center;
+    border:1px solid orange;
+    color: orange;
+    background-color: #fff;
+    outline: none;
+    /*アニメーションの指定*/ 
+    transition: all 0.4s ease-out;
+    display: inline-block;
+}
+#reservation a.linkBtn:hover {
+    /*ボタンの形状*/
+    border-color:transparent;
+    color: #fff;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+    background-size: 200% auto;
+    background-position: right center;
+    /*ボックスの影*/   
+    box-shadow: 0 5px 10px rgb(250,108,159,0.4);
+}
+
+/*----------------
+    #faq
+-----------------*/
+/*ベース*/
+.toggle {
+	display: none;
+}
+.Label {		/*タイトル*/
+	padding: 1em;
+	display: block;
+	background: #ddd;
+    border-radius: 5px;
+}
+.Label::before{		/*タイトル横の矢印*/
+	content:"";
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid red;
+	border-right: 2px solid red;
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	top:calc( 50% - 4px );
+	right: 20px;
+	transform: rotate(135deg);
+}
+.Label,
+.box {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: all 0.3s;
+}
+.box {		/*本文*/
+	height: 0;
+	margin-bottom:10px;
+	padding:0 20px;
+	overflow: hidden;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.toggle:checked + .Label + .box {	/*開閉時*/
+	height: auto;
+	padding:20px ;
+	transition: all .5s;
+}
+.toggle:checked + .Label::before {
+	transform: rotate(-45deg) !important;
+}
+
+/*----------------
+    #access
+-----------------*/
+#access .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#access iframe {
+    width: 49%;
+}
+#access .content {
+    width: 49%;
+}
+#access .content a {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px solid;
+    border-radius: 24px;
+    text-align: center;
+    margin-top: 2em;
+    transition: all 0.5s;
+}
+#access .content a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*----------------
+    footer
+-----------------*/
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+footer ul li {
+    font-size: 12px;
+}
+footer ul li + li {
+    margin-left: 1.5rem;
+}
+footer p {
+    font-size: 10px;
+    text-align: center;
+}
+/* トップページに戻るボタン */
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #9844b7;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+#page_top a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+#page_top a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/*----------------
+    レスポンシブ
+-----------------*/
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }    
+    /*----------------
+        header
+    -----------------*/
+    header {
+        padding-left: 2rem;
+        height: 60px;
+    }
+    header .wrapper {
+        padding-right: 0;
+        height: 60px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h1::before {
+        width: 2rem;
+        height: 2rem;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: 10;
+        width: 300px;
+        height: 100%;
+        padding-top: 3em;
+        visibility: hidden;
+    }
+    nav .inner {
+        padding: 25px;
+    }
+    nav .inner ul {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    nav .inner ul li {
+        margin: 0;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav .inner ul li:hover {
+        background-color: #9844b7;
+    }
+    nav .inner ul li:nth-child(1) {
+        border-top: 1px solid #000;
+    }
+    nav .inner ul li a {
+        font-size: 14px;
+        padding: 1rem;
+        padding-left: 0;
+        transition-duration: 0.2s;
+        transition: all 1.5s;
+    }
+    .open nav {
+        left: 0;
+        background-color: #fff;
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu_btn {
+        display: block;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .menu_btn span {
+        display: block;
+        height: 2px;
+        width: 28px;
+        background: #000000;
+        position: absolute;
+        left: 0;
+        transition: all 0.5s;
+    }
+    .menu_btn span:nth-child(1) {
+        top: 20px;
+    }
+    .menu_btn span:nth-child(2) {
+        top: 28px;
+    }
+    .menu_btn span:nth-child(3) {
+        top: 36px;
+    }
+    .open .menu_btn span {
+        background-color: #fff;
+    }
+    .open .menu_btn span:nth-child(1) {
+        transform: translateY(8px) rotate(-315deg);
+    }
+    .open .menu_btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .open .menu_btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(315deg);
+    }
+    #mask {
+        display: none;
+        transition: all 0.5s;
+    }
+    .open #mask {
+        display: block;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        opacity: 0.8;
+        cursor: pointer;
+    }    
+    header a.linkBtn {
+        position: inherit;
+        margin: 0 auto;
+    }
+
+    /*----------------
+        main
+    -----------------*/
+    main {
+        padding: 60px 0 0;
+    }
+    #firstView {
+        margin-bottom: 40px;
+        height: calc(100vh - 60px);
+    }
+    #firstView .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #firstView p.text {
+        font-size: 1.5rem;
+    }
+    #firstView br {
+        display: none;
+    }
+    #firstView span {
+        display: block;
+    }
+    #firstView .fade li img {
+        height: calc(100vh - 60px);
+    }    
+    /*----------------
+    #concept
+    -----------------*/
+    #concept .wrapper {
+        flex-direction: column;
+    }
+    #concept .content {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #concept .content h2 {
+        text-align: center;
+    }
+    #concept img.people {
+        width: 100%;
+    }
+    /*----------------
+    #system
+    -----------------*/
+    #system p.sub br {
+        display: none;
+    }    
+    #system ul {
+        flex-direction: column;
+    }
+    #system ul li {
+        width: 100%;
+    }
+    #system ul li + li {
+        margin-top: 2rem;
+    }
+    /*----------------
+    #plan
+    -----------------*/
+    #plan p.sub span {
+        display: block;
+    }
+    #plan ul {
+        flex-direction: column;
+    }
+    #plan ul li {
+        width: 100%;
+    }
+    #plan ul li + li {
+        margin-top: 2rem;
+    }
+    #plan p.price {
+        margin-bottom: 1rem;
+    }
+    #plan p.notice {
+        text-align: center;
+    }
+    /*----------------
+    #reservation
+    -----------------*/
+    #reservation {
+        height: calc(100vh - 60px);
+    }
+    #reservation h2.top span {
+        display: block;
+    }
+    #reservation p br {
+        display: none;
+    }
+    /*----------------
+    #faq
+    -----------------*/
+    .Label span {
+        display: block;
+    }
+    /*----------------
+    #access
+    -----------------*/
+    #access .wrapper {
+        flex-direction: column;
+    }
+    #access iframe {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #access .content {
+        width: 100%;
+    }
+    #access .content span {
+        display: block;
+        text-align: center;
+    }
+    #access .content a {
+        margin: 2em auto 0;
+    }
+    /*----------------
+    footer
+    -----------------*/
+    footer {
+        padding: 40px 0;
+    }
+    footer ul {
+        flex-direction: column;
+    }
+    footer ul li + li {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
